@@ -1,0 +1,9 @@
+<div class="card">
+    <p>
+        <i [ngClass]="
+        (title === 'Total Bookings' || title === 'Manual Booking' || title === 'Online Booking') ? 'fa fa-calendar-check-o' :
+        title === 'Average Staytime' ? 'fa fa-clock-o' : ''" class="cardIcon" aria-hidden="true"></i>
+    </p>
+    <p><b>{{title}}</b></p>
+    <p class="counter" [title]="count">{{count}} {{title == 'Average Staytime' ? " hrs" : ""}}</p>
+</div>

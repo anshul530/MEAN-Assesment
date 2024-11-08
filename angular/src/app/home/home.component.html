@@ -1,0 +1,61 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-auto bg-light sticky-top leftNavbar">
+            <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
+                <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip"
+                    data-bs-placement="right" data-bs-original-title="Icon-only">
+                    <img src="https://preview.webpixels.io/web/img/logos/clever-primary.svg" alt="...">
+                </a>
+                <ul
+                    class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between w-100 px-3 align-items-center logoutSec">
+                    <li class="nav-item"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm p-3 min-vh-100">
+            <div class="dashSection">
+                <h3 class="dash">Welcome to Dashboard&nbsp;!</h3>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-3 col-sm-6 cardClass" *ngFor="let key of objectKeys(multipleCounter)">
+                    <app-counterCard [title]="key" [count]="multipleCounter[key]"></app-counterCard>
+                </div>
+            </div>
+            <div class="container my-4">
+                <div class="row">
+                    <div class="col-12 col-md-6 mb-4">
+                        <div class="chart-box">
+                            <canvas baseChart [labels]="doughnutChartLabels" [datasets]="doughnutChartDatasets"
+                                [options]="doughnutChartOptions" [legend]="true" [type]="'doughnut'">
+                            </canvas>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-4">
+                        <div class="chart-box">
+                            <canvas baseChart [type]="'pie'" [datasets]="pieChartDatasets" [labels]="pieChartLabels"
+                                [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend">
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <div class="chart-box bottom-row">
+                            <canvas baseChart [data]="barChartData" [options]="barChartOptions"
+                                [plugins]="barChartPlugins" [legend]="barChartLegend" [type]="'bar'">
+                            </canvas>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <div class="chart-box bottom-row">
+                            <canvas baseChart [type]="'line'" [data]="lineChartData" [options]="lineChartOptions"
+                                [legend]="lineChartLegend">
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
