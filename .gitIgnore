@@ -1,38 +1,25 @@
 # Node.js
+
 node_modules/
-npm-debug.log
-yarn-error.log
 
-# Logs
-logs/
-*.log
+# Angular
+angular/dist/
+angular/out-tsc/
+angular/.angular/
+angular/*.js
+angular/*.js.map
+angular/*.tsbuildinfo
+angular/src/environments/*.ts
 
-# Environment files
-.env
-.env.local
-.env.*.local
+# Temporary files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# IDEs and Text Editors
-.vscode/
+# IDE specific files
 .idea/
+.vscode/
 
-# Operating System files
+# OS generated files
 .DS_Store
 Thumbs.db
-
-# Angular build output
-/dist/
-/build/
-
-# Temporary files and directories
-temp/
-tmp/
-
-# Test coverage reports
-/coverage/
-
-# TypeScript build output
-*.tsbuildinfo
-
-# Other generated files
-*.tgz
